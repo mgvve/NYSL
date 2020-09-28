@@ -1,0 +1,476 @@
+/*configuraciones generales*/
+:root{
+    --primary-color:#05393D;
+    --secondary-color: #BBEA1D;
+}
+
+*{
+    z-index: 1;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+img{
+    width: 100px;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: cursive;
+    color: var(--primary-color);
+    background-image: url(../img/imgback.jpg);
+    background-size: cover;
+    
+}
+
+
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    "nav"
+    "header"
+    "subtitle"
+    "main"
+    ;
+}
+
+article{
+    text-align: center;
+    padding: 0px 0 40px 0;
+    background-color: rgba(130, 242, 201, 0.5);
+    border-radius: 15px;
+    border: solid rgb(6, 66, 66);
+    margin: 15px;
+}
+
+/*estilos de header*/
+header{
+    grid-area: header;
+    background-image: url(../img/design2_image3.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+#logo{
+    grid-area: logo;
+    position: absolute;
+    left: 20px;
+    top: 110px;
+    width: 180px;
+    z-index: 1;
+    background-color: transparent;
+}
+
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 60px;
+    color: var(--primary-color);
+    z-index: 2;
+    background-color: transparent;
+    text-shadow: 4px 4px 4px var(--secondary-color);
+}
+
+h2{
+    padding: 5px 0 5px 0;
+    background-color: var(--primary-color);
+    color: white;
+    text-shadow: 1px var(--primary-color);
+    border-radius: 0 0 15px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/*estilos nav*/
+nav{
+    grid-area: nav;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #05393D;
+}
+
+nav>a{
+    padding: 0 35px 0 35px;
+    height: 100%;
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav>.active, nav>a:hover{
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    color: var(--primary-color);
+}
+
+.subtitle{
+    grid-area: subtitle;
+}
+
+/*estilos main generales*/
+main{
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 15px;
+}
+
+h3{
+    font-size: 25px;
+    margin: 0 0 15px 0;
+    color: #05393D;
+    text-decoration: var(--secondary-color)underline;
+    display: inline;
+}
+
+
+/* estilos del about*/
+#about>article{
+    width: 350px;
+    border-radius: 15px;
+    border: solid rgb(6, 66, 66);
+    margin: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 10px 0 60px 0;
+    background-color: rgba(130, 242, 201, 0.5)
+}
+
+/* estilos del index*/
+#index{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: static;
+}
+
+#index>article{
+    width: 250px;
+    margin: 65px 15px 15px 15px;
+    border: none;
+    background-color:  rgba(130, 242, 201, 0.5);
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px 0 60px 0;
+    border: solid  rgb(6, 66, 66);
+}
+
+#link-schedule{
+    text-decoration: brown;
+}
+
+
+
+#registrationform{
+    background-color: #BBEA1D;
+    font-size: 45px;
+    text-align: center;
+    color: var(--primary-color); 
+    padding: 0em;
+    border: solid var(--primary-color) 5px;
+    margin: 40px 30vw 0 30vw;
+}
+
+#registrationform :hover{
+    color: var(--primary-color);
+}
+
+/* estilos del contact*/
+#contact>article{
+    margin: 35px;
+}
+
+#contact>article>p{
+    margin: 35px;
+    text-align: center;
+}
+
+/*estilos de la galería*/
+#gallery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#gallery>.grid-container{
+    grid-template-areas: none;
+    grid-template-columns: repeat(3,200px);
+    grid-template-rows: repeat(4,200px);
+    margin: 35px;
+    grid-gap: 15px;
+}
+
+#gallery img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+#gallery>.grid-container>div:last-child{
+    grid-column: 1 / span 3;
+    height: 200px;
+}
+
+#gallery>.grid-container>div:nth-child(7){
+    grid-row: span 2;
+}
+
+#gallery>.grid-container>div:first-child{
+    grid-column: span 2;
+}
+
+#gallery>.grid-container>div:nth-child(8){
+    grid-row: span 2;
+}
+
+#gallery>.grid-container>div{
+    border: solid var(--primary-color);
+    border-radius: 15px;
+}
+
+#gallery>.grid-container>div>img:hover{
+    transform: scale(1.3);
+    border: solid var(--secondary-color) ;
+}
+
+/*Estilos Rules*/
+#rules{
+    color: black;
+    display: inline;
+    margin: 0 35px 0 35px;
+    text-align: justify;
+}
+
+#rules dt{
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 25px;
+    margin: 20px 0 0 10px;
+}
+
+#rules>article{
+    text-align: left;
+}
+
+#rules h3{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    margin: 0 0 35px 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+    padding: 0%;
+}
+
+/*estilos agenda*/
+#schedule{
+    display: inline;
+    text-align: center;
+    justify-content: center;
+}
+
+#schedule>article{
+    text-align: left;
+    padding: 15px;
+}
+
+#schedule h3{
+    text-decoration: none;
+    color: var(--primary-color);
+    text-align: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 45px;
+    text-decoration: var(--secondary-color) underline;
+}
+
+table{
+    border-collapse: collapse;
+    margin: 25px;
+    text-align: center;
+    width: 50%;
+    background-color:  rgba(130, 242, 201, 0.5);
+    border: 15px;
+}
+
+th{ 
+    background-color: var(--secondary-color);
+}
+
+th,td{
+    border: var(--primary-color) solid 2px;
+    text-align: center;
+}
+
+#sep-oct{
+    font-size: 17px;
+}
+
+
+#locations{ 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#locations>table{
+    width: 75%;
+}
+
+iframe{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+#locations thead th{ 
+    background-color: var(--primary-color);
+    color: white;
+    width: 50%;
+}
+
+
+#locations tbody{
+    border: solid 1px;
+}
+
+#locations tbody td{ 
+    font-size: 20px;
+}
+
+main div{
+    display: flex;
+    text-align: center;
+    align-content: center;
+}
+
+
+/*estilos formularios*/
+#registration{
+    display: inline;
+    border: 3px chocolate;
+    justify-content: center; 
+    margin: 0 65px 0 65px;
+}
+
+#registration h3{
+    color: green;
+    font-size: 25px;
+    text-decoration: none;
+    margin: 15px 0 0 0;
+}
+
+fieldset{
+    padding: 45px;
+}
+
+#registration input{
+    display: inline;
+    padding: 10px;
+}
+
+legend{
+    font-size: 35px;
+    color: var(--primary-color);
+    text-decoration: var(--secondary-color) underline;
+    border: solid 2px var(--primary-color);
+    border-radius: 15px;
+}
+
+#registration h4{
+    font-size: 35px;
+    color: red;
+    text-decoration: var(--primary-color) underline;
+    margin: 15px;
+    text-align: center;
+}
+
+fieldset{
+    background-color:  rgba(130, 242, 201, 0.5);
+    display: flex;
+    padding: 15px;
+    border: solid 3px var(--primary-color);
+    border-radius: 15px;
+    margin: 35px 0 35px 0;
+}
+
+input{
+    padding: 0px;
+    margin: 0;
+    background-color: #05393D;
+    color: #BBEA1D;
+    border-radius: 15px;
+    border: solid 1px var(--secondary-color);
+}
+
+label{
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+
+#registration article{
+    color: black;
+    text-align: left;
+    padding: 0 10px 0 10px;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+}
+
+#registration select{
+    padding: 0px;
+    margin: 0;
+    background-color: #05393D;
+    color: #BBEA1D;
+    border-radius: 15px;
+    border: solid 1px var(--secondary-color);
+    font-size: 20px;
+}
+
+.checkmark{
+    background-color: #05393D;
+    color: #BBEA1D;
+    border-radius: 15px;
+    border: solid 1px var(--secondary-color);
+}
+
+#submit{
+    font-size: 35px;
+    border: solid red 2px;
+}
+
+#fieldsetsub{
+    border: none;
+    justify-content: center;
+}
+
+#registration p{
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
